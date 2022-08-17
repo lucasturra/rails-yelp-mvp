@@ -1,0 +1,30 @@
+ <div class="container mt-5 d-flex justify-content-center align-items-center">
+
+  <div>
+    <h1 class="mb-4">Restaurants infoℹ️</h1>
+
+    <p><strong>Name:</strong>  <%= @restaurant.name %></p>
+    <p><strong>Address:</strong> <%= @restaurant.address %></p>
+    <p><strong>Phone Number:</strong> <%= @restaurant.phone_number %></p>
+    <p><strong>Category:</strong> <%= @restaurant.category %></p>
+
+    <%= link_to 'Add a Review', new_restaurant_review_path(@restaurant), class: 'btn btn-dark mr-3' %>
+    <%= class="mb-4" link_to 'See all restaurants', restaurants_path, class: 'btn btn-dark mt-4' %>
+  </div>
+</div>
+
+
+
+
+ <!--<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, placeholder: "Write your review here" %>
+  <%= f.input :rating, placeholder: "Add a rating (1-5)" %>
+  <%= f.submit "Add a review", class: "btn btn-primary" %>
+<% end %>
+
+ <h1><%= @restaurant.name %></h1>
+<h2>Address: <%=  @restaurant.address%></h2>
+<h3>Category: <%= @restaurant.category %></h3>
+
+<%= link_to 'Reviews', restaurant_reviews_path(@restaurant) %>
+--!
